@@ -1,52 +1,63 @@
-.header {
-  height: 100vh;
-  width: 100%;
+.portfolio {
+  background-color: #222;
+  overflow: hidden;
+  line-height: 0;
 
-  &__wrapper {
-    height: 100%;
-    width: 100%;
+  .flex__content {
     display: flex;
-    justify-content: center;
-    background-size: 300% 300%;
-    background-image: linear-gradient(
-      -45deg,
-      rgba(#333, 1) 0%,
-      rgba(#222, 1) 25%,
-      rgba(49, 48, 48, 1) 51%,
-      rgba(#111, 1) 100%
-    );
-    animation: animateColor 10s ease infinite;
-    align-items: center;
+    flex: 1 1 1;
+  }
+
+  .card {
+    width: 33.3333%;
+    height: 50rem;
+    overflow: hidden;
+    &__wrapper {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
+
+.section__about {
+  background: #222;
+  padding: 20rem 0 10rem 0;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__image {
+    background-image: url("../../img/5.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 50%;
   }
 
   &__content {
-    text-align: center;
-    text-transform: uppercase;
-  }
+    width: 50%;
+    line-height: 1.7;
 
-  .heading__primary {
-    font-weight: 900;
-    font-size: 7rem;
-    color: white;
-    letter-spacing: 5px;
-  }
-
-  .heading__secondary {
-    font-weight: 500;
-    font-size: 5rem;
-    color: white;
-    letter-spacing: 8px;
-  }
-
-  @keyframes animateColor {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
+    &--wrapper {
+      width: 80%;
+      margin: 0 auto;
     }
   }
 }

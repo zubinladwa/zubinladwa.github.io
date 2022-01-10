@@ -1,24 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-* {
-  margin: 0px;
-  padding: 0px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  line-height: 1.7;
-}
-
 .header {
   height: 100vh;
   width: 100%;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.header__backgroundText {
+  position: absolute;
+}
+
+.header .heading__large {
+  font-size: 16rem;
+  letter-spacing: 16px;
+  z-index: 1;
+  color: #282828;
 }
 
 .header__wrapper {
@@ -28,40 +24,65 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-size: 300% 300%;
-  background-image: linear-gradient(
-    -45deg,
-    #333333 0%,
-    #222222 25%,
-    #313030 51%,
-    #111111 100%
-  );
-  -webkit-animation: animateColor 10s ease infinite;
-  animation: animateColor 10s ease infinite;
+  background-color: #222;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__content {
   text-align: center;
   text-transform: uppercase;
+  z-index: 2;
 }
 
-.header .heading__primary {
+.heading__primary {
   font-weight: 900;
   font-size: 7rem;
   color: white;
   letter-spacing: 5px;
 }
 
-.header .heading__secondary {
+.heading__secondary {
   font-weight: 500;
   font-size: 5rem;
   color: white;
-  letter-spacing: 9px;
+  letter-spacing: 8px;
+}
+
+.heading__tertiary {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.title__block {
+  padding: 1rem 0;
+  text-align: center;
+  background: #222;
+  color: white;
+}
+
+.title__block--normal {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.para {
+  color: #585252;
+  font-family: "Roboto";
+  text-align: justify;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.about__para {
+  margin: 3rem 0 2rem 0;
 }
 
 @-webkit-keyframes animateColor {
@@ -86,5 +107,154 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.container {
+  width: 140rem;
+  margin: 0 auto;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lspace-1 {
+  letter-spacing: 1px;
+}
+
+.lspace-2 {
+  letter-spacing: 2px;
+}
+
+.lspace-3 {
+  letter-spacing: 3px;
+}
+
+.lspace-4 {
+  letter-spacing: 4px;
+}
+
+.button {
+  display: inline-block;
+  background: #4834d4;
+  padding: 1.3rem 1.8rem;
+  border: none;
+  outline: none;
+  color: white;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.portfolio {
+  background-color: #222;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.portfolio .flex__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1;
+          flex: 1 1 1;
+}
+
+.portfolio .card {
+  width: 33.3333%;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.portfolio .card__wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.portfolio img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.section__about {
+  background: #222;
+  padding: 20rem 0 10rem 0;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__image {
+  background-image: url("../../img/5.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50rem;
+  width: 50%;
+}
+
+.about__content {
+  width: 50%;
+  line-height: 1.7;
+}
+
+.about__content--wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
