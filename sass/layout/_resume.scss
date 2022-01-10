@@ -1,0 +1,18 @@
+.section__resume {
+  background: #222;
+  padding: 10rem 0;
+}
+
+.resume {
+  display: flex;
+  margin: 5rem 0;
+  justify-content: space-between;
+
+  &__education {
+    width: 50%;
+  }
+
+  &__experience {
+    width: 50%;
+  }
+}

@@ -4,11 +4,18 @@
 @import "abstract/variables";
 
 @import "layout/header";
+@import "layout/portfolio";
+@import "layout/about";
+@import "layout/resume";
+@import "layout/footer";
 
 @import "base/typography";
 @import "base/animations";
 @import "base/base";
 @import "base/utilities";
 
-@import "components/button"; // Only Homepage
+@import "components/button";
+@import "components/card";
+
+// Only Homepage
 @import "pages/home";

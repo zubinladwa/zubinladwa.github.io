@@ -1,0 +1,28 @@
+.section__about {
+  background: #222;
+  padding: 20rem 0 10rem 0;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__image {
+    background-image: url("../../img/zubin.jpg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 50%;
+  }
+
+  &__content {
+    width: 50%;
+    line-height: 1.7;
+
+    &--wrapper {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}

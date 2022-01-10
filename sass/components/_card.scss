@@ -1,0 +1,24 @@
+.card {
+  background: #333;
+  box-shadow: rgba(#222, 0.2) 0px 2px 8px 0px;
+  padding: 4rem 3rem 2rem 3rem;
+  width: 85%;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-align: justify;
+  border-radius: 4px;
+  color: rgb(88, 82, 82);
+
+  &__title {
+    color: #58b19f;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  &__footer {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}
