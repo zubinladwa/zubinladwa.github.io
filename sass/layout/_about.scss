@@ -1,12 +1,13 @@
 .section__about {
   background: #222;
-  padding: 20rem 0 10rem 0;
+  padding: 20rem 0 20rem 0;
 }
 
 .about {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__image {
     background-image: url("../../img/zubin.jpg");
     background-position: top;

@@ -1,0 +1,32 @@
+.navigation {
+  &__checkbox {
+    visibility: hidden;
+  }
+
+  &__button {
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 20;
+    height: 6rem;
+    width: 6rem;
+    background: white;
+  }
+
+  &__background {
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    background-image: radial-gradient(#222, #333);
+    z-index: 10;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+    transition: 1s ease;
+  }
+}
