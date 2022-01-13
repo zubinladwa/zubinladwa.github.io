@@ -213,17 +213,61 @@ body {
 
 .navigation__checkbox {
   visibility: hidden;
+  display: none;
 }
 
 .navigation__button {
   position: fixed;
-  top: 6rem;
+  top: 5.5rem;
   right: 6rem;
   border-radius: 50%;
   z-index: 20;
   height: 6rem;
   width: 6rem;
   background: white;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+}
+
+.navigation__icon, .navigation__icon::after, .navigation__icon::before {
+  height: 0.2rem;
+  width: 3rem;
+  background: #111;
+  display: inline-block;
+}
+
+.navigation__icon::after, .navigation__icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navigation__icon::after {
+  top: 0.8rem;
+}
+
+.navigation__icon::before {
+  top: -0.8rem;
+}
+
+.navigation__icon:hover, .navigation__icon:active {
+  background-position: 100%;
+}
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
 }
 
 .navigation__background {
@@ -235,13 +279,59 @@ body {
   border-radius: 50%;
   background-image: radial-gradient(#222, #333);
   z-index: 10;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navigation__nav {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  z-index: 15;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+.navigation__item {
+  padding: 2rem 0;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .navigation__checkbox:checked ~ .navigation__background {
   -webkit-transform: scale(100);
           transform: scale(100);
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.navigation__checkbox:not(:checked) ~ .navigation__nav {
+  display: none;
+  visibility: none;
 }
 
 .section__about {
@@ -422,9 +512,14 @@ body {
   color: white;
 }
 
+.footer__title {
+  font-weight: 900 !important;
+  font-size: 3rem !important;
+}
+
 .footer__text {
   color: white;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 300;
 }
 
