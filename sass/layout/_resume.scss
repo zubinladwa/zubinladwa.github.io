@@ -33,6 +33,10 @@
       width: 100%;
     }
 
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
     @include respond(tab-land) {
       width: 100%;
     }
@@ -43,6 +47,10 @@
 
     @include respond(phone) {
       width: 100%;
+    }
+
+    @include respond(tab-port) {
+      width: 80%;
     }
 
     @include respond(tab-land) {
