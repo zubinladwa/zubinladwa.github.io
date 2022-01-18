@@ -3,15 +3,13 @@
   width: 100%;
   position: relative;
   background-attachment: fixed;
-  &__backgroundText {
-    position: absolute;
+
+  @include respond(tab-land) {
+    height: 70vh;
   }
 
-  .heading__large {
-    font-size: 16rem;
-    letter-spacing: 16px;
-    z-index: 1;
-    color: lighten($color: #222, $amount: 2.5);
+  &__backgroundText {
+    position: absolute;
   }
 
   &__wrapper {

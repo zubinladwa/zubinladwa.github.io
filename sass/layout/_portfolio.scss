@@ -6,12 +6,21 @@
   .flex__content {
     display: flex;
     flex: 1 1 1;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
   }
 
-  .card {
+  .strech {
     width: 33.3333%;
     height: 50rem;
     overflow: hidden;
+
+    @include respond(tab-land) {
+      width: 80%;
+    }
+
     &__wrapper {
       height: 100%;
       width: 100%;

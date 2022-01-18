@@ -1,3 +1,17 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 .heading__primary {
   font-weight: 900;
@@ -18,6 +32,38 @@
   color: #fff;
   font-weight: 700;
   letter-spacing: 4px;
+}
+
+.heading__large {
+  font-size: 16rem;
+  letter-spacing: 16px;
+  z-index: 1;
+  color: #282828;
+}
+
+@media only screen and (max-width: 75em) {
+  .heading__large {
+    font-size: 12rem;
+  }
+}
+
+@media only screen and (min-width: 75em) and (max-width: 112.5em) {
+  .heading__large {
+    font-size: 14rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .heading__large {
+    font-size: 9rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading__large {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .title__block {
@@ -82,18 +128,61 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.7;
+  background: #222;
 }
 
 .container {
   width: 140rem;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    width: 96rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    width: 72rem;
+  }
+}
+
+@media only screen and (min-width: 75em) and (max-width: 112.5em) {
+  .container {
+    width: 114rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .container {
+    width: 60rem;
+  }
 }
 
 .align-left {
@@ -393,15 +482,14 @@ body {
   background-attachment: fixed;
 }
 
-.header__backgroundText {
-  position: absolute;
+@media only screen and (max-width: 75em) {
+  .header {
+    height: 70vh;
+  }
 }
 
-.header .heading__large {
-  font-size: 16rem;
-  letter-spacing: 16px;
-  z-index: 1;
-  color: #282828;
+.header__backgroundText {
+  position: absolute;
 }
 
 .header__wrapper {
@@ -441,13 +529,28 @@ body {
           flex: 1 1 1;
 }
 
-.portfolio .card {
+@media only screen and (max-width: 75em) {
+  .portfolio .flex__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.portfolio .strech {
   width: 33.3333%;
   height: 50rem;
   overflow: hidden;
 }
 
-.portfolio .card__wrapper {
+@media only screen and (max-width: 75em) {
+  .portfolio .strech {
+    width: 80%;
+  }
+}
+
+.portfolio .strech__wrapper {
   height: 100%;
   width: 100%;
   overflow: hidden;

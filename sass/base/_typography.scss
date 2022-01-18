@@ -1,25 +1,51 @@
 // Roboto - 300, 400, 500, 700, 900
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-.heading__primary {
-  font-weight: 900;
-  font-size: 7rem;
-  color: white;
-  letter-spacing: 5px;
-}
+.heading {
+  &__primary {
+    font-weight: 900;
+    font-size: 7rem;
+    color: white;
+    letter-spacing: 5px;
+  }
 
-.heading__secondary {
-  font-weight: 500;
-  font-size: 5rem;
-  color: white;
-  letter-spacing: 8px;
-}
+  &__secondary {
+    font-weight: 500;
+    font-size: 5rem;
+    color: white;
+    letter-spacing: 8px;
+  }
 
-.heading__tertiary {
-  font-size: 4rem;
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 4px;
+  &__tertiary {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+
+  &__large {
+    font-size: 16rem;
+    letter-spacing: 16px;
+    z-index: 1;
+    color: lighten($color: #222, $amount: 2.5);
+
+    @include respond(tab-land) {
+      font-size: 12rem;
+    }
+
+    @include respond(desktop) {
+      font-size: 14rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 9rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+      visibility: hidden;
+    }
+  }
 }
 
 .title__block {
