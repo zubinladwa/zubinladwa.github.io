@@ -132,6 +132,50 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 }
 
+@-webkit-keyframes animateLeft {
+  0% {
+    opacity: 0;
+    bottom: -40rem;
+    left: -40rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: -10rem;
+    left: -7rem;
+  }
+}
+
+@keyframes animateLeft {
+  0% {
+    opacity: 0;
+    bottom: -40rem;
+    left: -40rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: -10rem;
+    left: -7rem;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -657,6 +701,7 @@ body {
   width: 33.3333%;
   height: 50rem;
   overflow: hidden;
+  position: relative;
 }
 
 @media only screen and (max-width: 75em) {
@@ -680,6 +725,62 @@ body {
   overflow: hidden;
 }
 
+.portfolio .strech__hover {
+  position: relative;
+  background: #007bff;
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  bottom: -10rem;
+  left: -7rem;
+  opacity: 0;
+  border-radius: 50%;
+  text-decoration: none;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.portfolio .strech__hover:hover {
+  opacity: 1;
+  -webkit-animation: ease 0.4s animateLeft forwards;
+          animation: ease 0.4s animateLeft forwards;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .portfolio .strech__hover {
+    width: 30rem;
+    height: 30rem;
+    opacity: 1;
+  }
+}
+
+.portfolio .strech__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 2;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.portfolio .strech__title {
+  font-size: 4rem;
+  color: #f1f1f1;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .portfolio .strech__title {
+    font-size: 3rem;
+    padding-left: 2rem;
+  }
+}
+
 .portfolio img {
   width: 100%;
   height: 100%;
@@ -688,8 +789,8 @@ body {
   background-position: center;
   background-size: contain;
   cursor: pointer;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -709,6 +810,11 @@ body {
 .portfolio img:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.portfolio img:hover ~ .strech__hover {
+  -webkit-animation: ease 0.4s animateLeft forwards;
+          animation: ease 0.4s animateLeft forwards;
 }
 
 .section__resume {
