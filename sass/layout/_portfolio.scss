@@ -9,6 +9,8 @@
 
     @include respond(tab-land) {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -19,6 +21,13 @@
 
     @include respond(tab-land) {
       width: 80%;
+      margin-bottom: 1rem;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+      height: 40rem;
+      margin-bottom: 1rem;
     }
 
     &__wrapper {
@@ -36,6 +45,17 @@
     background-size: contain;
     cursor: pointer;
     transition: all ease 0.5s;
+
+    @include respond(phone) {
+      background-position: left;
+      background-size: cover;
+    }
+
+    @include respond(tab-land) {
+      background-position: center;
+      background-size: cover;
+    }
+
     &:hover {
       transform: scale(1);
     }
