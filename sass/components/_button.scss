@@ -1,10 +1,10 @@
 .button {
   display: inline-block;
-  background: #58b19f;
+  background: $color-shaded-green;
   padding: 1.3rem 1.8rem;
   border: none;
   outline: none;
-  color: white;
+  color: $color-white;
   margin-top: 2rem;
   font-size: 1.6rem;
   font-weight: 500;

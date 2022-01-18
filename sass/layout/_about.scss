@@ -40,6 +40,12 @@
       background-position: top;
       background-size: cover;
     }
+
+    @include respond(tab-port) {
+      width: 100%;
+      background-position: top;
+      background-size: cover;
+    }
   }
 
   &__content {

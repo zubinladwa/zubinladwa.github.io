@@ -5,7 +5,7 @@
   &__primary {
     font-weight: 900;
     font-size: 7rem;
-    color: white;
+    color: $color-white;
     letter-spacing: 5px;
 
     @include respond(phone) {
@@ -34,7 +34,7 @@
     font-size: 16rem;
     letter-spacing: 16px;
     z-index: 1;
-    color: lighten($color: #222, $amount: 2.5);
+    color: lighten($color: $color-primary, $amount: 2.5);
 
     @include respond(tab-land) {
       font-size: 12rem;
@@ -58,8 +58,8 @@
 .title__block {
   padding: 1rem 0;
   text-align: center;
-  background: #222;
-  color: white;
+  background: $color-primary;
+  color: $color-white;
 
   &--normal {
     font-size: 3rem;
@@ -82,5 +82,5 @@
 
 .heading__quad {
   font-size: 2.5rem;
-  color: white;
+  color: $color-white;
 }

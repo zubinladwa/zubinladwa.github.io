@@ -1,6 +1,6 @@
 .card {
-  background: #333;
-  box-shadow: rgba(#222, 0.2) 0px 2px 8px 0px;
+  background: $color-primary-dark;
+  box-shadow: rgba($color-primary, 0.2) 0px 2px 8px 0px;
   padding: 4rem 3rem 2rem 3rem;
   width: 85%;
   margin-bottom: 3rem;
@@ -8,7 +8,7 @@
   font-size: 1.7rem;
   text-align: justify;
   border-radius: 4px;
-  color: rgb(88, 82, 82);
+  color: $color-primary-light;
 
   @include respond(phone) {
     width: 100%;
@@ -16,10 +16,16 @@
 
   @include respond(tab-land) {
     width: 100%;
+    padding: 4rem;
+  }
+
+  @include respond(desktop) {
+    padding: 4rem 2rem;
+    width: 95%;
   }
 
   &__title {
-    color: #58b19f;
+    color: $color-shaded-green;
     font-weight: 900;
     font-size: 2rem;
     margin: 0 0 1.5rem 0;

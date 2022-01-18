@@ -309,6 +309,14 @@ body {
 @media only screen and (max-width: 75em) {
   .card {
     width: 100%;
+    padding: 4rem;
+  }
+}
+
+@media only screen and (min-width: 75em) and (max-width: 112.5em) {
+  .card {
+    padding: 4rem 2rem;
+    width: 95%;
   }
 }
 
@@ -523,6 +531,14 @@ body {
 }
 
 @media only screen and (max-width: 75em) {
+  .about__image {
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
   .about__image {
     width: 100%;
     background-position: top;
